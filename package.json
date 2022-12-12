@@ -12,9 +12,9 @@
   },
   "scripts": {
     "test": "standard | snazzy && tape test/*.js | faucet",
-    "rebuild": "node-gyp rebuild --verbose",
-    "prebuild": "prebuild --all --strip && git submodule update --init --recursive",
-    "install": "prebuild-install || node-gyp rebuild"
+    "preinstall": "prebuild --all --strip",
+    "install": "prebuild-install || node-gyp rebuild",
+    "prepare": "git submodule update --init --recursive"
   },
   "dependencies": {
     "bindings": "^1.5.0",
