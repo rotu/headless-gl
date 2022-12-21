@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "standard | snazzy && tape test/*.js | faucet",
-    "prepack": "git submodule update --init --recursive",
+    "prepack": "git clone https://github.com/stackgl/angle.git ./angle",
     "prebuild": "prebuild --all --strip",
     "install": "prebuild-install || node-gyp rebuild"
   },
